@@ -1,3 +1,12 @@
+/* Title  :-  Implement matrix class as ADT. Write a program to perform matrix addition, subtraction, and
+multiplication. In read matrix function, raise an exception if any attempt is made to have rows and columns
+beyond the array size. Raise an exception if any attempt is made to perform matrix operations on matrices
+which does not satisfy the matrix order criteria. Implement using C++.
+
+Author   :-  Sahil Dhargave
+
+*/
+
 #include <iostream>
 using namespace std;
 
