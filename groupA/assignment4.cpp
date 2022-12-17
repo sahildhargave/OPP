@@ -1,3 +1,20 @@
+/*
+Title  :-  Implement a class Complex which represents the Complex Number data type. Implement the
+following operations:
+a. Constructor (including a default constructor which creates the complex number
+0+0i).
+b. Overloaded operator + to add two complex numbers.
+c. Overloaded operator * to multiply two complex numbers.
+d. Overloaded << and >> to print and read Complex Numbers.
+Write a C + + program to read and display all project information using Operator Overloading
+
+Author  :-  Sahil Dhargve
+
+
+
+*/
+
+
 #include <iostream>
 using namespace std;
 
