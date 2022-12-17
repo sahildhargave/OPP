@@ -1,3 +1,9 @@
+/*
+Title  :- Write a C++ program to print all the repeated numbers with their frequency in an array in minimum time
+complexity
+Author :- Sahil Dhargave
+*/
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
