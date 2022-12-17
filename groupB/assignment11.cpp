@@ -1,3 +1,16 @@
+/*
+Title  :- The ticket booking system of Cinemax theatre has to be implemented using C++ program. There are 15
+rows and 10 seats in each row. Doubly linked lists have to be maintained to keep track of free seats in rows.
+Assume some random booking to start with. Use an array to store pointers (Head pointer) to each row. On
+demand
+a. The list of available
+b. seats is to be displayed
+c. The seats are to be booked
+d. The booking can be cancelled
+
+Author :- Sahil Dhargave
+*/
+
 #include <iostream>
 #include <math.h>
 using namespace std;
