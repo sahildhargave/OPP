@@ -1,3 +1,8 @@
+/*
+
+Title  :- Write a C++ program to sort N names in alphabetical order
+Author :- Sahil Dhargave
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
