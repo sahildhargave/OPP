@@ -1,7 +1,9 @@
 /*
-Title  :-  Write a program to maintain an employee database in binary file with employee information such as empId,
-name, age, department, post and salary. Write function for adding new record, displaying all records,
-searching for a particular employee, updating employee salary and post.
+Title  :-  Write a class template to represent a generic vector. Include member functions to perform the following tasks:
+a To create the vector.
+b To modify the value of a given element.
+c To multiply the vector by a scalar value.
+d To display the vector in the form (10, 20, 30)
 
 Author  :- Sahil Dhargave
 
