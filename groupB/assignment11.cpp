@@ -11,6 +11,171 @@ d. The booking can be cancelled
 Author :- Sahil Dhargave
 */
 
+
+
+Methoe -1
+	
+	
+	#include<bits/stdc++.h>
+using namespace std;
+
+struct node
+{
+    char data='A';
+    node * prev;
+    node * next;
+};
+class cinema
+{
+    node * head[15],*tail[15],*t,*p;
+    char c;
+    public:
+    cinema()
+    {
+        c = 'A';
+        t=NULL;
+        p=NULL;
+        for(int i=0;i<15;i++)
+        {
+            head[i]=tail[i]=NULL;
+        }
+    }
+    void create();
+    void display();
+    void book();
+    void cancel();
+};
+void cinema::create()
+{
+    for(int i=0;i<15;i++)
+    {
+        head[i]=new node;
+        p=head[i];
+        p->prev=NULL;
+        for(int j=1;j<10;j++)
+        {
+            t=new node;
+            t->prev=p;
+            p->next=t;
+            p=t;
+            tail[i]=t;
+            t->next=NULL;
+        }
+    }
+}
+void cinema:: display()
+{
+    for(int i=0;i<10;i++)
+    {
+        cout<<"   "<<i+1;
+    }
+    cout<<endl;
+    cout<<"  ";
+    for(int i=0;i<14;i++)
+    {
+        cout<<"  "<<"_";
+    }
+    cout<<endl;
+    
+    for(int i=0;i<15;i++)
+    {
+        p=head[i];
+        if(i<9)
+        cout<<i+1<<"  |";
+        else
+        cout<<i+1<<" |";
+        while(p!=NULL)
+        {
+            cout<<p->data<<"   ";
+            p=p->next;
+           
+        }
+        cout<<"|"<<endl;
+    }
+    cout<<"  ";
+    for(int i=0;i<14;i++)
+    {
+        cout<<"  "<<"_";
+    }
+    cout<<endl;
+}
+
+void cinema ::book()
+{
+    int r,c;
+    cout<<"Enter Which sit set u have to book enter row no. : ";
+    cin>>r;
+    cout<<"Enter column no.";
+    cin>>c;
+    p=head[r-1];
+    for(int i=0;i<c-1;i++)
+    {
+        p=p->next;
+    }
+    if(p->data=='A')
+    {
+    p->data='B';
+    cout<<"Sit booked"<<endl;
+    }
+    else
+    {
+        cout<<"Sit had already booked"<<endl;
+    }
+} 
+void cinema ::cancel()
+{
+    int r,c;
+    cout<<"Enter Which sit set u have to book enter row no. : ";
+    cin>>r;
+    cout<<"Enter column no.";
+    cin>>c;
+    p=head[r-1];
+    for(int i=0;i<c-1;i++)
+    {
+        p=p->next;
+    }
+    if(p->data=='B')
+    {
+    p->data='A';
+    cout<<"Sit Cancelled"<<endl;
+    }
+    else
+    {
+        cout<<"Sit had already cancelled or empty"<<endl;
+    }
+} 
+
+int main()
+{
+    cinema c;
+    c.create();
+    int ch;
+    do{
+    cout<<"1.BOOK"<<endl<<"2.Cancel"<<endl<<"3.Display"<<endl<<"4.Exit"<<endl;
+    cout<<"Enter Your choice : ";
+    cin>>ch;
+    switch(ch)
+    {
+        case 1: 
+        c.book();
+        break;
+        case 2:
+        c.cancel();
+        break;
+        case 3: 
+        c.display();
+        break;
+        case 4:
+        exit(0);
+        break;
+    }
+    }while(1);
+    return 0;
+}
+
+
+
+
 #include <iostream>
 #include <math.h>
 using namespace std;
